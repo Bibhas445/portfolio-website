@@ -43,7 +43,7 @@ body {
     
 /* Header background styling */
 header {
-    background-image: url('/Users/apple/Documents/portfolio-website/Back.jpg');
+    background-image: url('portfolio-website/Back.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Keeps the background image fixed while scrolling */
