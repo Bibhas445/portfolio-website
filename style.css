@@ -79,17 +79,23 @@ body {
     background-color: rgba(255, 255, 255, 0.9); /* White with 80% opacity */
     padding: 50px 0; /* Optional: adjust padding as needed */
   }
-  
-  #skills{
-    background-color: rgba(255, 255, 255, 0.9); /* White with 80% opacity */
-    padding: 50px 0; /* Optional: adjust padding as needed */
-  }
-  
-  #contact{
-    background-color: rgba(255, 255, 255, 0.9); /* White with 80% opacity */
-    padding: 50px 0; /* Optional: adjust padding as needed */
-  }
-  
+  /* Skills and Contact Sections Background */
+#skills,
+#contact {
+  background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+  padding: 50px 0; /* Add padding for spacing */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Text Alignment */
+#skills h2,
+#contact h2 {
+  margin-bottom: 30px; /* Add margin below section titles */
+}
+
+#contact p {
+  margin: 10px 0; /* Add margin to paragraphs for spacing */
+}
 
   
   /* Timeline (Experience Section) */
