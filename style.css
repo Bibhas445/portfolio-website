@@ -40,31 +40,10 @@ header p {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-/* About Section */
-#about {
+/* Section Styling */
+section {
   background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
   color: #333; /* Dark text for better readability */
-  padding: 50px 0; /* Add padding */
-  border-radius: 10px; /* Optional: rounded corners */
-}
-
-/* Projects Section */
-#projects {
-  background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
-  padding: 50px 0; /* Add padding */
-  border-radius: 10px; /* Optional: rounded corners */
-}
-
-/* Skills Section */
-#skills {
-  background-color: rgba(255, 255, 255, 0.8); /* White background with opacity */
-  padding: 50px 0; /* Add padding */
-  border-radius: 10px; /* Optional: rounded corners */
-}
-
-/* Experience Section */
-#experience {
-  background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
   padding: 50px 0; /* Add padding */
   border-radius: 10px; /* Optional: rounded corners */
 }
@@ -106,15 +85,15 @@ header p {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .profile-photo {
-      width: 120px; /* Smaller profile photo on mobile */
-      height: 120px; /* Ensure it remains circular */
+    width: 120px; /* Smaller profile photo on mobile */
+    height: 120px; /* Ensure it remains circular */
   }
 
   h1.display-4 {
-      font-size: 2rem; /* Smaller header */
+    font-size: 2rem; /* Smaller header */
   }
 
   .btn {
-      width: 100%; /* Full-width buttons */
+    width: 100%; /* Full-width buttons */
   }
 }
