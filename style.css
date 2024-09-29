@@ -70,17 +70,27 @@ body {
   }
   /* Projects Section */
 #projects {
-    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    background-color: rgba(255, 255, 255, 0.9); /* White with 80% opacity */
     padding: 50px 0; /* Optional: adjust padding as needed */
   }
   
   /* Experience Section */
   #experience {
-    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    background-color: rgba(255, 255, 255, 0.9); /* White with 80% opacity */
     padding: 50px 0; /* Optional: adjust padding as needed */
   }
   
+  #skills{
+    background-color: rgba(255, 255, 255, 0.9); /* White with 80% opacity */
+    padding: 50px 0; /* Optional: adjust padding as needed */
+  }
   
+  #contact{
+    background-color: rgba(255, 255, 255, 0.9); /* White with 80% opacity */
+    padding: 50px 0; /* Optional: adjust padding as needed */
+  }
+  
+
   
   /* Timeline (Experience Section) */
   .timeline {
