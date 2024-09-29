@@ -35,6 +35,7 @@ body {
   section {
     background-color: transparent; /* Make sections transparent */
   }
+  
 /* Profile photo styling */
 .profile-photo {
     width: 150px;
@@ -67,6 +68,18 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
   }
+  /* Projects Section */
+#projects {
+    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    padding: 50px 0; /* Optional: adjust padding as needed */
+  }
+  
+  /* Experience Section */
+  #experience {
+    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    padding: 50px 0; /* Optional: adjust padding as needed */
+  }
+  
   
   
   /* Timeline (Experience Section) */
