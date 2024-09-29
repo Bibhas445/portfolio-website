@@ -43,6 +43,29 @@ header p {
 }
 
 
+/* Skills Section */
+#skills {
+  background-color: rgba(255, 255, 255, 0.8); /* White background with opacity */
+  padding: 50px 0; /* Add padding */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+.skills-list {
+  list-style-type: none; /* Remove default list styling */
+  padding-left: 0; /* Remove left padding */
+}
+
+.skills-list li {
+  font-size: 18px; /* Font size for skills */
+  color: #333; /* Text color */
+  padding: 8px 0; /* Space between list items */
+}
+
+.skills-list li i {
+  color: #007bff; /* Icon color */
+  margin-right: 8px; /* Space between icon and text */
+}
+
 /* Section Styling */
 section {
   background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
