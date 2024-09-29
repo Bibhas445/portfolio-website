@@ -8,7 +8,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <title>Bibhas Dutta - DevOps Engineer</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth; /* Enables smooth scrolling */
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -68,7 +74,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5">
+    <section id="projects" data-aos="fade-right" class="py-5">
       <div class="container">
         <h2 class="text-center">Projects</h2>
         <div class="row">
@@ -149,15 +155,17 @@
 
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Bibhas Dutta | DevOps Engineer</p>
-    <div>
-      <a href="https://www.linkedin.com/in/bibhas1997/" target="_blank" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/yourusername" target="_blank" class="text-white"><i class="fab fa-github"></i></a>
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2024 Bibhas Dutta | DevOps Engineer</p>
+      <p><a href="#about" class="text-white">About</a> | <a href="#projects" class="text-white">Projects</a> | <a href="#contact" class="text-white">Contact</a></p>
+      <p>Find me on: 
+        <a href="https://linkedin.com/in/bibhas1997" class="text-white">LinkedIn</a>, 
+        <a href="https://github.com/yourusername" class="text-white">GitHub</a>
+      </p>
     </div>
   </footer>
   
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     AOS.init();

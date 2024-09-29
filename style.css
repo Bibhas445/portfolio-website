@@ -61,7 +61,7 @@ body {
     font-family: 'Roboto', sans-serif;
   }
   header {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark background for header */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background for header */
     position: relative;
   }
   
@@ -70,6 +70,7 @@ header h1,
 header p {
   color: #fff; /* Pure white */
   font-weight: 700; /* Increase font weight for boldness */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
   header::before {
@@ -81,9 +82,16 @@ header p {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4); /* Optional dark overlay */
   }
+  #about {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Subtle gradient background */
+    color: white;
+    padding: 50px 0;
+  }
+  
   /* Projects Section */
 #projects {
     background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    background: linear-gradient(to right, #f0f4f8, #d9e6f2);
     padding: 50px 0; /* Optional: adjust padding as needed */
     border-radius: 10px
   }
@@ -152,6 +160,19 @@ header p {
     transform: scale(1.05); /* Slight scaling */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
   }
+  /* Hover effect for navigation links */
+.nav-item a:hover {
+  color: #feb47b; /* Accent color for hover */
+  transition: color 0.3s;
+}
+
+/* Hover effect for social media icons in the footer */
+footer a:hover {
+  color: #ff7e5f; /* Accent color */
+  transform: scale(1.1); /* Slight scaling effect */
+  transition: transform 0.3s ease-in-out;
+}
+
   /* Media Queries */
 @media (max-width: 768px) {
   .profile-photo {
