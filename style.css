@@ -5,9 +5,10 @@ body {
   
   /* Header */
   header {
-    background-image: url('header-bg.jpg');
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('background-image.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
   }
   
   /* Project Cards */
@@ -48,11 +49,12 @@ body {
     
 /* Body background styling */
 body {
+    background: linear-gradient(to right, #f0f4f8, #d9e6f2);
     background-image: url('Back.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Keeps the background image fixed while scrolling */
-    
+    font-family: 'Roboto', sans-serif;
   }
   header {
     background-color: rgba(0, 0, 0, 0.7); /* Dark background for header */
@@ -72,12 +74,14 @@ body {
 #projects {
     background-color: rgba(255, 255, 255, 0.9); /* White with 80% opacity */
     padding: 50px 0; /* Optional: adjust padding as needed */
+    border-radius: 10px
   }
   
   /* Experience Section */
   #experience {
     background-color: rgba(255, 255, 255, 0.9); /* White with 80% opacity */
     padding: 50px 0; /* Optional: adjust padding as needed */
+    border-radius: 10px
   }
   /* Skills and Contact Sections Background */
 #skills,
@@ -118,5 +122,40 @@ body {
     color: #007bff;
     font-size: 24px;
   }
+  .btn {
+    background-color: #ff7e5f; /* Base button color */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+  }
+  
+  .btn:hover {
+    background-color: #feb47b; /* Change to accent color on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+  }
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slight scaling */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  }
+  /* Media Queries */
+@media (max-width: 768px) {
+  .profile-photo {
+    width: 120px; /* Smaller profile photo on mobile */
+    height: 120px;
+  }
+  
+  h1.display-4 {
+    font-size: 2rem; /* Smaller header */
+  }
+  
+  .btn {
+    width: 100%; /* Full-width buttons */
+  }
+}
+ 
   
   
