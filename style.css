@@ -1,21 +1,21 @@
 /* General Styling */
-/* Body Background */
 body {
   font-family: 'Roboto', sans-serif;
   background-image: url('Back.jpg'); /* Ensure this path is correct */
-  background-size: cover; /* Ensures the background image covers the area */
+  background-size: cover; /* Ensures the background image covers */
   background-position: center; /* Centers the background image */
   background-attachment: fixed; /* Keeps the background image fixed while scrolling */
 }
 
-/* Header Background */
+/* Header */
 header {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('background-image.jpg');
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('background-image.jpg'); /* Ensure correct path */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  position: relative;
+  z-index: 1; /* Ensure header content is above overlay */
 }
-
 
 header::before {
   content: "";
@@ -24,7 +24,7 @@ header::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  background-color: rgba(0, 0, 0, 0.4); /* Optional dark overlay */
   z-index: -1; /* Ensure the overlay is behind the content */
 }
 
@@ -37,36 +37,32 @@ header p {
 }
 
 /* Profile photo styling */
-/* Profile photo styling */
 .profile-photo {
-  width: 150px; /* Maintain equal width and height for a circle */
-  height: 150px; /* Maintain equal width and height for a circle */
+  width: 150px; /* Ensure equal width and height */
+  height: 150px; /* Ensure equal width and height */
   object-fit: cover; /* Ensures the image fits correctly */
   border-radius: 50%; /* Ensures the image is circular */
-  border: 4px solid white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 4px solid white; /* White border */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
-
 
 /* About Section */
 #about {
-  background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
-  color: #333; /* Dark text color for better contrast */
-  padding: 50px 0;
-  border-radius: 10px; /* Optional: rounded corners for a softer look */
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+  color: #333; /* Dark text for better readability */
+  padding: 50px 0; /* Add padding */
+  border-radius: 10px; /* Optional: rounded corners */
 }
 
 /* Projects Section */
 #projects {
-  background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
-  color: #333; /* Dark text color for better contrast */
-  padding: 50px 0;
-  border-radius: 10px; /* Optional: rounded corners for a softer look */
+  background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+  padding: 50px 0; /* Add padding */
+  border-radius: 10px; /* Optional: rounded corners */
 }
 
-/* Skills and Contact Sections */
-#skills,
-#contact {
+/* Skills Section */
+#skills {
   background-color: rgba(255, 255, 255, 0.8); /* White background with opacity */
   padding: 50px 0; /* Add padding */
   border-radius: 10px; /* Optional: rounded corners */
@@ -75,44 +71,21 @@ header p {
 /* Experience Section */
 #experience {
   background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
-  padding: 50px 0;
-  border-radius: 10px;
-}
-
-/* Project Cards */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  padding: 50px 0; /* Add padding */
+  border-radius: 10px; /* Optional: rounded corners */
 }
 
 /* Button Styling */
 .btn {
   background-color: black; /* Black button color */
   color: white; /* White text color */
-  border-radius: 5px;
+  border-radius: 5px; /* Rounded corners */
   transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
 }
 
 .btn:hover {
   background-color: #333; /* Slightly lighter black on hover */
   transform: translateY(-3px); /* Lift effect on hover */
-}
-
-/* Hover effect for navigation links */
-.nav-item a:hover {
-  color: #feb47b; /* Accent color on hover */
-  transition: color 0.3s;
-}
-
-/* Hover effect for social media icons in the footer */
-footer a:hover {
-  color: #ff7e5f; /* Accent color */
-  transform: scale(1.1); /* Slight scaling effect */
-  transition: transform 0.3s ease-in-out;
 }
 
 /* Timeline (Experience Section) */
@@ -132,26 +105,15 @@ footer a:hover {
   position: absolute;
   left: 0;
   top: 0;
-  color: #007bff;
+  color: #007bff; /* Adjust color as needed */
   font-size: 24px;
-}
-
-/* Text Alignment */
-#skills h2,
-#contact h2 {
-  margin-bottom: 30px;
-}
-
-#contact p {
-  margin: 10px 0;
-  line-height: 1.6;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .profile-photo {
       width: 120px; /* Smaller profile photo on mobile */
-      height: 120px;
+      height: 120px; /* Ensure it remains circular */
   }
 
   h1.display-4 {
