@@ -159,28 +159,44 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
-      <div class="container">
-        <h2 class="text-center">Contact Me</h2>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe src="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
+<section id="contact" class="py-5">
+  <div class="container text-center">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out! I'd love to hear from you.</p>
+    <form class="mt-4">
+      <div class="mb-3">
+        <label for="name" class="form-label"><i class="fas fa-user"></i> Name</label>
+        <input type="text" class="form-control" id="name" required>
       </div>
-    </section>
-  </main>
+      <div class="mb-3">
+        <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label"><i class="fas fa-comment"></i> Message</label>
+        <textarea class="form-control" id="message" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-black">Send Message</button> <!-- Black button -->
+    </form>
+  </div>
+</section>
 
-  <!-- Footer Section -->
-  <footer class="bg-dark text-white text-center py-4">
-    <div class="container">
-      <p>&copy; 2024 Bibhas Dutta | DevOps Engineer</p>
-      <p><a href="#about" class="text-white">About</a> | <a href="#projects" class="text-white">Projects</a> | <a href="#contact" class="text-white">Contact</a></p>
-      <p>Find me on: 
-        <a href="https://linkedin.com/in/bibhas1997" class="text-white">LinkedIn</a>, 
-        <a href="https://github.com/Bibhas445" class="text-white">GitHub</a>
-      </p>
-      <a href="Bibhas_Dutta_CV.pdf" download="Bibhas_Dutta_CV.pdf" class="btn btn-outline-light mt-3">Download CV</a>
-    </div>
-  </footer>
+<!-- Footer Section -->
+<footer class="bg-dark text-white text-center py-4" style="background-color: #343a40;">
+  <div class="container">
+    <p>&copy; 2024 Bibhas Dutta | DevOps Engineer</p>
+    <p>
+      <a href="#about" class="text-white">About</a> | 
+      <a href="#projects" class="text-white">Projects</a> | 
+      <a href="#contact" class="text-white">Contact</a>
+    </p>
+    <p>Find me on: 
+      <a href="https://linkedin.com/in/bibhas1997" class="text-white" target="_blank"><i class="fab fa-linkedin"></i></a>, 
+      <a href="https://github.com/Bibhas445" class="text-white" target="_blank"><i class="fab fa-github"></i></a>
+    </p>
+    <a href="Bibhas_Dutta_CV.pdf" download="Bibhas_Dutta_CV.pdf" class="btn btn-outline-light mt-3 animate-btn">Download CV</a>
+  </div>
+</footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <!-- AOS library -->
   <script>
