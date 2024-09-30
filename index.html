@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  title>Interactive About Section</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"> <!-- AOS for animations -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -158,22 +160,39 @@
     </section>
 
      <!-- About Section -->
-     <section id="about" class="py-5" data-aos="fade-up" data-aos-duration="1200">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h2>About Me</h2>
-            <p>I am a DevOps Engineer with 2+ years of experience, specializing in cloud infrastructure, CI/CD pipelines, and file management automation.</p>
-          </div>
-          <div class="col-md-6">
-            <img src="about-image.jpg" alt="About Me" class="img-fluid rounded"> <!-- Add your image here -->
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<section id="about" class="about-section py-5" data-aos="fade-up" data-aos-duration="1200">
+  <div class="container text-center">
+    <h2 class="dynamic-heading" data-aos="fade-right" data-aos-duration="1500">
+      Hi, I'm <span id="dynamic-text"></span>
+    </h2>
+    <p data-aos="fade-left" data-aos-duration="1500">
+      I’m a DevOps Engineer with a passion for automation, cloud technologies, and building scalable infrastructure.
+    </p>
+    <p class="fun-fact" data-aos="fade-up" data-aos-duration="1000">
+      Fun Fact: I love <span id="dynamic-interest"></span>!
+    </p>
+    <img src="your-photo.jpg" alt="My Profile" class="profile-photo" data-aos="zoom-in" data-aos-duration="1500">
+  </div>
+</section>
 
-  <!-- Footer -->
+<!-- Fun Facts Section -->
+<section id="fun-facts" class="py-5">
+  <div class="container text-center">
+    <h2>Did you know?</h2>
+    <div class="fun-facts-grid">
+      <div class="fact-item" data-aos="flip-left" data-aos-duration="1200">
+        <p>I’ve automated deployment for over 50 projects!</p>
+      </div>
+      <div class="fact-item" data-aos="flip-right" data-aos-duration="1200">
+        <p>I love playing guitar in my free time.</p>
+      </div>
+      <div class="fact-item" data-aos="flip-up" data-aos-duration="1200">
+        <p>I can write scripts in 3 different languages!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- Footer Section -->
 <footer class="bg-dark text-white text-center py-4">
   <div class="container">
@@ -186,7 +205,34 @@
     <a href="https://drive.google.com/file/d/1hAc6ZmdasQ2Hxtex2yqiFQB0aEgwQa58/view?usp=share_link" download="Bibhas_Dutta_CV.pdf" class="btn btn-outline-light mt-3">Download CV</a> <!-- Download CV button -->
   </div>
 </footer>
-  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <!-- AOS library -->
+<script>
+    AOS.init(); // Initialize AOS
+
+    // Dynamic typing effect for name and fun fact
+    document.addEventListener("DOMContentLoaded", function() {
+        const dynamicText = document.getElementById('dynamic-text');
+        const dynamicInterest = document.getElementById('dynamic-interest');
+
+        const texts = ["a DevOps Engineer", "a Cloud Enthusiast", "an Automation Expert"];
+        const interests = ["coding", "music", "traveling"];
+
+        let textIndex = 0;
+        let interestIndex = 0;
+
+        function typeText() {
+            dynamicText.innerHTML = texts[textIndex];
+            dynamicInterest.innerHTML = interests[interestIndex];
+
+            textIndex = (textIndex + 1) % texts.length;
+            interestIndex = (interestIndex + 1) % interests.length;
+
+            setTimeout(typeText, 3000); // Changes text every 3 seconds
+        }
+
+        typeText(); // Start the text animation
+    });
+</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
