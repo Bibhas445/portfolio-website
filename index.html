@@ -123,6 +123,13 @@
             <span class="badge">Bash Scripting</span>
           </div>
         </div>
+        <div class="col-md-4">
+          <h5>AI Tools & Skills</h5>
+          <div class="skills-badge" data-aos="fade-up" data-aos-duration="1500">
+            <span class="badge">ChatGPT</span> <!-- Add ChatGPT as a skill -->
+            <span class="badge">Natural Language Processing</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -175,28 +182,82 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-5">
-    <div class="container text-center">
-      <h2>Contact Me</h2>
-      <p>Feel free to reach out! I'd love to hear from you.</p>
-      <form class="mt-4">
-        <div class="mb-3">
-          <label for="name" class="form-label"><i class="fas fa-user"></i> Name</label>
-          <input type="text" class="form-control" id="name" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
-          <input type="email" class="form-control" id="email" required>
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label"><i class="fas fa-comment"></i> Message</label>
-          <textarea class="form-control" id="message" rows="3" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-black">Send Message</button>
-      </form>
-    </div>
-  </section>
+  <!-- Contact Section with Success/Error Messages -->
+<section id="contact" class="py-5">
+  <div class="container text-center">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out! I'd love to hear from you.</p>
+
+    <!-- Success and Error Message Divs -->
+    <div id="form-messages"></div>
+
+    <!-- Formspree Form -->
+    <form action="https://formspree.io/f/xkgwdqlb" method="POST" class="mt-4 contact-form" id="contact-form" autocomplete="off">
+      <!-- Name Input -->
+      <div class="mb-3">
+        <label for="name" class="form-label"><i class="fas fa-user"></i> Name</label>
+        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+      </div>
+
+      <!-- Email Input -->
+      <div class="mb-3">
+        <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
+        <input type="email" name="_replyto" class="form-control" id="email" placeholder="Your Email" required>
+      </div>
+
+      <!-- Message Textarea -->
+      <div class="mb-3">
+        <label for="message" class="form-label"><i class="fas fa-comment"></i> Message</label>
+        <textarea name="message" class="form-control" id="message" rows="5" placeholder="Type your message here..." required></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-black">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- JavaScript for Form Handling -->
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+    
+    const formData = new FormData(this);
+    const formMessages = document.getElementById('form-messages');
+    
+    fetch(this.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        formMessages.innerHTML = '<p class="success-message">Your message has been sent successfully!</p>';
+        this.reset(); // Clear the form
+      } else {
+        formMessages.innerHTML = '<p class="error-message">Oops! Something went wrong. Please try again.</p>';
+      }
+    }).catch(error => {
+      formMessages.innerHTML = '<p class="error-message">Oops! There was a problem sending your message. Please try again.</p>';
+    });
+  });
+</script>
+
+<!-- Add some CSS for Success/Error Messages -->
+<style>
+  .success-message {
+    color: green;
+    font-weight: bold;
+  }
+
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+</style>
+
+
 
   <!-- Footer Section -->
   <footer class="bg-dark text-white text-center py-4">

@@ -452,3 +452,53 @@ footer .btn-outline-light:hover {
   }
 }
 
+/* Contact Form Styling */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto; /* Center the form */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+/* Input and Textarea Styling */
+.contact-form .form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus Effect on Input and Textarea */
+.contact-form .form-control:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* Blue glow on focus */
+}
+
+/* Submit Button Styling */
+.btn-black {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-black:hover {
+  background-color: #333;
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 15px;
+  }
+
+  .contact-form .form-control {
+    font-size: 14px;
+  }
+}
