@@ -1,10 +1,17 @@
 /* General Styling */
+/* General Styling */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  scroll-behavior: smooth;
+  background-image: url(''); /* Change this to your image path */
+  background-size: cover; /* Ensures the background image covers the entire area */
+  background-position: center; /* Centers the background image */
+  background-attachment: fixed; /* Keeps the background image fixed while scrolling */
+  color: #333; /* Text color */
+  scroll-behavior: smooth; /* Smooth scrolling */
 }
+
+/* Other existing styles remain unchanged */
+
 
 /* Navbar */
 .navbar {
@@ -206,3 +213,242 @@ footer .btn-outline-light:hover {
     width: 100%;
   }
 }
+/* General Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  z-index: 10;
+}
+
+/* Header */
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Header Name and Title */
+header h1,
+header p {
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Profile Photo Styling */
+.profile-photo {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.profile-photo:hover {
+  transform: scale(1.1);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.timeline-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 20px;
+  transition: background-color 0.3s;
+}
+
+.timeline-icon:hover {
+  background-color: #0056b3;
+}
+
+.timeline-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Section */
+.skills-badge {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.badge {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 5px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+  background-color: #0056b3;
+}
+
+/* Projects */
+.card {
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Boxy design for Did You Know facts */
+.fact-box {
+  background-color: #f9f9f9; /* Light background color */
+  border: 2px solid #007bff; /* Blue border */
+  padding: 20px; /* Padding inside the box */
+  margin: 10px; /* Space between boxes */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effect */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+.fact-box:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Styling for Icons */
+.fact-box i {
+  color: #007bff; /* Blue icon color */
+  margin-bottom: 10px; /* Space below icon */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .fact-box {
+    margin-bottom: 20px; /* Space between boxes on mobile */
+  }
+}
+
+
+/* Contact Form */
+#contact .form-control {
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#contact .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+}
+
+footer .btn-outline-light {
+  border: 2px solid white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+footer .btn-outline-light:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-3px);
+}
+
+/* Button Animation */
+.animate-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-btn:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+}
+
+.animate-btn:hover:after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Fun Facts */
+.fun-facts-grid {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.fact-item {
+  width: 30%;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.fact-item:hover {
+  transform: translateY(-5px);
+}
+
+/* AOS Animations */
+[data-aos] {
+  transition: all 0.5s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  h1.display-4 {
+    font-size: 2rem;
+  }
+
+  .badge {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
